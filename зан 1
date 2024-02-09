@@ -5,26 +5,26 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int arrsum = 0;
-        int[][] tDarr = new int[3][3];
+        int[][] arr = new int[3][3];
         Random random = new Random();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                tDarr[i][j] = random.nextInt(9)+1;
+                arr[i][j] = random.nextInt(9)+1;
             }
         }
 
-        String strArr = Arrays.deepToString(tDarr)
+        String strArr = Arrays.deepToString(arr)
                 .replace("[[", "|")
                 .replace("],", "|")
                 .replace("[", "\n|")
                 .replace("]]", "|");
-        //for (int i = 0; i < 3; i++) {
-            //for (int j = 0; j < 3; j++) {
-                //arrsum += tDarr[0][2];
+        int arrsum = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                arrsum += arr[i][j];
+                System.out.println(strArr);
+                System.out.println(arrsum);
             }
-            //System.out.println(arrsum);
-            //System.out.println();
         }
     }
 }
