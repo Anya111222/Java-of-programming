@@ -17,14 +17,28 @@ public class Main {
                 .replace("[[", "|")
                 .replace("],", "|")
                 .replace("[", "\n|")
-                .replace("]]", "|");
-        int arrsum = 0;
+                .replace("]]", "|"); 
+
+        int arrsum = 0; int arrumn = 1; int arrmin = 0;
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                arrsum += arr[i][j];
-                System.out.println(strArr);
-                System.out.println(arrsum);
+                boolean b = j > i;
+                if (i != j && j >i) {
+                    arrsum += arr[i][j];
+                }
+                if (i == j) {
+                    arrumn *= arr[i][j];
+                }
+                if (i != j && j<i) {
+                    arrmin -= arr[i][j];
+                }
             }
         }
+        System.out.println(strArr);
+        System.out.println(arrsum);
+        System.out.println(arrumn);
+        System.out.println(arrmin);
+
+        }
     }
-}
