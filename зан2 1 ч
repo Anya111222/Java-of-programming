@@ -18,13 +18,13 @@ public class Matrix {
     }
 
     
-    public void printMatrix() {
-        String strMatrix = Arrays.deepToString(matrix)
-                .replace("[[", "|")
-                .replace("],", "|")
-                .replace("[", "\n|")
-                .replace("]]", "|");
-        System.out.println(strMatrix);
+    public String printMatrix() {
+    String strMatrix = Arrays.deepToString(matrix)
+            .replace("[[", "|")
+            .replace("],", "|")
+            .replace("[", "\n|")
+            .replace("]]", "|");
+    return strMatrix;
     }
 
     
