@@ -3,8 +3,8 @@ import java.util.Random;
 
 
 public class Matrix {
-    private int[][] matrix; //объявление 2-х массима
-    private Random random; //объявление рандомных чисел
+    private int[][] matrix;
+    private Random random;
 
     
     public Matrix(int rows, int cols) {
