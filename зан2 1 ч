@@ -1,0 +1,60 @@
+import java.util.Arrays;
+import java.util.Random;
+
+
+public class Matrix {
+    private int[][] matrix; //объявление 2-х массима
+    private Random random; //объявление рандомных чисел
+
+    
+    public Matrix(int rows, int cols) {
+        matrix = new int[rows][cols];
+        random = new Random();
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = random.nextInt(9) + 1;
+            }
+        }
+    }
+
+    
+    public void printMatrix() {
+        String strMatrix = Arrays.deepToString(matrix)
+                .replace("[[", "|")
+                .replace("],", "|")
+                .replace("[", "\n|")
+                .replace("]]", "|");
+        System.out.println(strMatrix);
+    }
+
+    
+    public int sum() {
+        int sum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = i + 1; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
+            }
+        }
+        return sum;
+    }
+
+    
+    public int umn() {
+        int umn = 1;
+        for (int i = 0; i < matrix.length; i++) {
+            umn *= matrix[i][i];
+        }
+        return umn;
+    }
+
+    
+    public int min() {
+        int min = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < i; j++) {
+                min -= matrix[i][j];
+            }
+        }
+        return min;
+    }
+}
