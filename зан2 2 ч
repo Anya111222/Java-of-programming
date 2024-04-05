@@ -1,0 +1,7 @@
+public class Main {
+    public static void main(String[] args) {
+        Matrix matrix = new Matrix(3, 3);
+        matrix.printMatrix();
+        System.out.println(matrix.sum());
+        System.out.println(matrix.umn());
+        System.out.println(matrix.min());
