@@ -9,7 +9,6 @@ public class IntLinkedList implements IntList {
         public Node(int data) {
             this.next = null;
             this.data = data;
-
         }
     }
     private Node head;
