@@ -23,5 +23,7 @@ public class Main {
 
         System.out.println("List: " + list);
         System.out.println("List size: " + list.size());
+        list.removeFirst(element -> element > 10);
+        System.out.println(list.get(4));
     }
 }
