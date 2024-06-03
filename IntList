@@ -10,4 +10,6 @@ public interface IntList {
     void remove(int idx);
     void remove(Predicate<Integer> condition);
     int size();
+    void removeLast(Predicate<Integer> condition);
+    void removeFirst(Predicate<Integer> condition);
 }
